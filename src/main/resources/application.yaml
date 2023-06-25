@@ -1,1 +1,2 @@
-
+greenService:
+  baseUrl: "http://localhost:8082"
