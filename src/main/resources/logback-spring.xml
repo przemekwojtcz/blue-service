@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <append>false</append>
+        <file>log-file.log</file>
+        <encoder>
+            <pattern>>%d{"yyyy-MM-dd'T'HH:mm:ss.SSSXXX", UTC+2} %-5level ${PID} [%thread]  %logger{35} -%kvp- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="FILE" />
+    </root>
+<!--    <logger name="guru.springframework.controllers" level="WARN" additivity="false">-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--    </logger>-->
+<!--    <logger name="guru.springframework.helpers" level="WARN" additivity="false">-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--    </logger>-->
+</configuration>
